@@ -12,7 +12,7 @@ namespace Calculator
             Console.WriteLine("\nThis simple program will carry out basic math for you.");
             Console.WriteLine("Why dont you give it a try?");
             Console.WriteLine("\n------------------------------------------------------");
-            Console.Write("Please enter the first number, then press ENTER: ");
+            Console.Write("Please enter the first number, then press <ENTER>: ");
             int num1;
             while (!int.TryParse(Console.ReadLine(), out num1))
             {
