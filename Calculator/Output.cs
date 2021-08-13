@@ -3,6 +3,7 @@ using System.Threading;
 
 namespace Calculator
 {
+    //Class responsible for all output including exception handling.
     class Output
     {
         public static void WelcomeMessage()
@@ -10,26 +11,60 @@ namespace Calculator
             Console.WriteLine("Welcome to the Console Calculator!");
             Dashes();
         }
-        public static void InputValue(int value)
+        public static int InputValue(int value)
         {
+            //First number input.
             if (value == 1)
             {
-                Console.Write("Please enter the first number: ");
+                int userInput;
+
+                Console.Write("Please enter the first whole number: ");
+                while (!int.TryParse(Console.ReadLine(), out userInput))
+                {
+                    Console.Write("Invalid input! Please enter a whole number: ");
+                }
+                return userInput;
             }
-            else if (value == 2)
+            //Second number input.
+            else
             {
-                Console.Write("Please enter the second number: ");
+                Console.Write("Please enter the second whole number: ");
+                int userInput;
+                while (!int.TryParse(Console.ReadLine(), out userInput))
+                {
+                    Console.Write("Invalid input! Please enter a whole number: ");
+                }
+                return userInput;
             }
         }
-        public static void OperatorChoice()
+        public static string OperatorChoice()
         {
+            string userChoice;
+            
             Console.WriteLine("Please choose from the following operators:");
             Console.WriteLine("a - Addition\nb - Subtraction\nc - Multiplication\nd - Division");
+            Console.Write($"Your choice is: ");
+            userChoice = Console.ReadLine();
+            while (userChoice != "a" && userChoice != "b" && userChoice != "c" && userChoice != "d")
+            {
+                Console.Write("Invalid choice! Please select a valid option: ");
+                userChoice = Console.ReadLine();
+            }
+            return userChoice;
         }
-        public static void RunAgain()
+        public static string RunAgain()
         {
+            string userChoice;
+
             Console.WriteLine("Would you like to carry out another calculation?");
             Console.Write("Please select y / n: ");
+            userChoice = Console.ReadLine();
+            while (userChoice != "y" && userChoice != "n")
+            {
+                Console.Write("Invalid choice! Please select a valid option: ");
+                userChoice = Console.ReadLine();
+            }
+            return userChoice;
         }
         public static void FarewellMessage()
         {

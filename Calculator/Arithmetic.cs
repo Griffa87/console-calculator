@@ -2,6 +2,7 @@
 
 namespace Calculator
 {
+    //Class responsible for calculations and user choice.
     class Arithmetic
     {
         public static int Addition(int a, int b)
@@ -24,11 +25,8 @@ namespace Calculator
             int sum = a / b;
             return sum;
         }
-        public static void Answer(int input1, int input2)
+        public static void Answer(string choice, int input1, int input2)
         {
-
-            Console.Write("Your choice is: "); 
-            string choice = Console.ReadLine();
             Output.Dashes();
             Output.Loading();
             switch (choice)
@@ -52,11 +50,11 @@ namespace Calculator
                     Console.ResetColor();
                     break;
                 case "d":
-                    int division = Division(input1, input2);
+                    Division(input1, input2);
                     Console.ForegroundColor = ConsoleColor.Yellow;
                     Console.WriteLine($"{input1} / {input2} = " + decimal.Divide(input1, input2));
                     Console.ResetColor();
-                    break;
+                    break;     
             }
         }
     }
