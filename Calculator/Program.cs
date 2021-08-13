@@ -6,10 +6,10 @@ namespace Calculator
     {
         public static void Main()
         {
-            int input1;
-            int input2;
-            string choice;
-            string response;
+            int input1; //Users first number.
+            int input2; //Users second number.
+            string choice; //Users operator choice.
+            string response; //Users asked if they want to exit or calculate again.    
             bool running = true;
 
             Output.WelcomeMessage();

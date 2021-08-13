@@ -44,11 +44,11 @@ namespace Calculator
             Console.WriteLine("Please choose from the following operators:");
             Console.WriteLine("a - Addition\nb - Subtraction\nc - Multiplication\nd - Division");
             Console.Write($"Your choice is: ");
-            userChoice = Console.ReadLine();
+            userChoice = Console.ReadLine().ToLower();
             while (userChoice != "a" && userChoice != "b" && userChoice != "c" && userChoice != "d")
             {
                 Console.Write("Invalid choice! Please select a valid option: ");
-                userChoice = Console.ReadLine();
+                userChoice = Console.ReadLine().ToLower();
             }
             return userChoice;
         }
@@ -58,11 +58,11 @@ namespace Calculator
 
             Console.WriteLine("Would you like to carry out another calculation?");
             Console.Write("Please select y / n: ");
-            userChoice = Console.ReadLine();
+            userChoice = Console.ReadLine().ToLower();
             while (userChoice != "y" && userChoice != "n")
             {
                 Console.Write("Invalid choice! Please select a valid option: ");
-                userChoice = Console.ReadLine();
+                userChoice = Console.ReadLine().ToLower();
             }
             return userChoice;
         }
