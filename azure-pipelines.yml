@@ -20,11 +20,13 @@ steps:
     solution: '$(solution)'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+
 - task: CopyFiles@2
   inputs:
     SourceFolder: '$(System.DefaultWorkingDirectory)'
     Contents: 'Artifact'
     TargetFolder: '$(Build.ArtifactStagingDirectory)/Calculator'
+- powershell: echo '$(System.DefaultWorkingDirectory)'
 
 - task: PublishBuildArtifacts@1
   inputs:
