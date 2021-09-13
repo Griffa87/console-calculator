@@ -23,10 +23,9 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    SourceFolder: '$(System.DefaultWorkingDirectory)'
-    Contents: 'Artifact'
+    SourceFolder: '$(System.DefaultWorkingDirectory)/Calculator/bin/Release'
+    Contents: '**'
     TargetFolder: '$(Build.ArtifactStagingDirectory)/Calculator'
-- powershell: echo '$(System.DefaultWorkingDirectory)'
 
 - task: PublishBuildArtifacts@1
   inputs:
