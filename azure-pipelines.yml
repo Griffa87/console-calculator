@@ -30,6 +30,6 @@ steps:
 
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: 'C:\Users\wgriffin\Repos\C# Projects\Calculator'
+    PathtoPublish: 'https://github.com/Griffa87/console-calculator'
     ArtifactName: 'drop'
     publishLocation: 'Container'
