@@ -9,7 +9,7 @@ namespace Calculator
         public static void WelcomeMessage()
         {
             Console.WriteLine("Welcome to the Console Calculator!");
-            Dashes();
+            LineBreak();
         }
         public static int InputValue(int value)
         {
@@ -71,7 +71,7 @@ namespace Calculator
             Console.WriteLine("Thank you for using the Console Calculator.");
             Console.WriteLine("Have a nice day!");
         }
-        public static void Dashes()
+        public static void LineBreak()
         {
             Console.WriteLine("------------------------------------------------");
         }

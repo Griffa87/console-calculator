@@ -6,10 +6,10 @@ namespace Calculator
     {
         public static void Main()
         {
-            int input1; //Users first number.
-            int input2; //Users second number.
-            string choice; //Users operator choice.
-            string response; //Users asked if they want to exit or calculate again.    
+            int input1;            //Users first number.
+            int input2;            //Users second number.
+            string choice;         //Users operator choice.
+            string response;       //Users asked if they want to exit or calculate again.    
             bool running = true;
 
             Output.WelcomeMessage();
@@ -17,7 +17,7 @@ namespace Calculator
             {
                 input1 = Output.InputValue(1);                
                 input2 = Output.InputValue(2);               
-                Output.Dashes();
+                Output.LineBreak();
                 choice = Output.OperatorChoice();
                 Arithmetic.Answer(choice, input1, input2);
                 response = Output.RunAgain();
@@ -28,7 +28,7 @@ namespace Calculator
                 else
                 {
                     running = false;
-                    Output.Dashes();
+                    Output.LineBreak();
                     Output.FarewellMessage();
                 }
             }

@@ -27,7 +27,7 @@ namespace Calculator
         }
         public static void Answer(string choice, int input1, int input2)
         {
-            Output.Dashes();
+            Output.LineBreak();
             Output.Loading();
             switch (choice)
             {
